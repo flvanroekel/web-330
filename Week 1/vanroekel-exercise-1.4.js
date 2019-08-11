@@ -15,7 +15,7 @@ console.log(header.display("Faye", "Van Roekel", "Exercise 1.4"));
   Expected output:
 
   FirstName LastName
-  Exercise 1.3
+  Exercise 1.4
   Today's Date
 
  Car added to the racetrack!
