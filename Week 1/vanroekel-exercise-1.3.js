@@ -1,6 +1,6 @@
 const header = require('../Vanroekel-header.js')
                        
-console.log(header.display("Faye", "Van Roekel", "Exercise 1.1"));
+console.log(header.display("Faye", "Van Roekel", "Exercise 1.3"));
 
 
 /*
