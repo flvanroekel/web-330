@@ -5,17 +5,17 @@ console.log(header.display("Faye", "Van Roekel", "Exercise 1.1"));
 
 /*
 ============================================
-; Title:  Exercise 1.1 
+; Title:  Exercise 1.3
 ; Author: Faye Van Roekel
 ; Date:   08 August 2019
-; Description: Class Refresher - Exercise 1.1
+; Description: Class Refresher - Exercise 1.3
 ;===========================================
 */
 /*
   Expected output:
 
   FirstName LastName
-  Exercise 1.1
+  Exercise 1.3
   Today's Date
 
   -- DISPLAYING CELL PHONE DETAILS --
