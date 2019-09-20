@@ -1,0 +1,84 @@
+<!--
+====================================
+; Title:  vanroekel-exercise-7.3.html
+; Author: Faye Van Roekel
+; Date:   19 September 2019
+; Description: 'for each binding'
+;===================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>vanroekel-exercise-7.4</title>
+
+    <!-- Stylesheet - Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Libraries -->
+    <script src="../knockout-3.5.0.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div role="main" class="container">
+        <br /><br />
+
+        <h2>The Other Binding</h2>
+
+        <table class="table table-light-gray table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody data-bind="foreach: tutorial">
+            <tr>
+                <td><span data-bind="text: title"></span></td>
+                <td><span data-bind="text: description"></span></td>
+                <td><a data-bind="attr: { href: url, target: '_blank' }">Link</a>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+<br />
+          <script>
+                function tutorialViewModel() {
+                  this.tutorial = ko.observableArray([
+                    { url: 'https://www.guru99.com/interactive-javascript-tutorials.html', title: "JavaScript Tutorial For Beginners", description: "Tutorial by Guru99" },
+                    { url: 'https://www.codecademy.com/learn/introduction-to-javascript', title: "Introduction to JavaScript", description: "Codecademy Tutorials" },
+                    { url: "https://stackify.com/learn-javascript-tutorials/", title: "Learn JavaScript", description: "Stackify Website Tutorial" },
+                    { url: "https://www.youtube.com/watch?v=PkZNo7MFNFg", title: "Learn JavaScript Full Course for Beginners", description: "Free Code Camp YouTube Video" },
+                    { url: "https://www.youtube.com/watch?v=0QeFAE03qJc", title: "JavaScript Basics Tutorial", description: "Programming Knowledge YouTube Video" }
+        ]);
+      }
+      ko.applyBindings(new tutorialViewModel());
+    </script>
+
+  </body>
+</html>
